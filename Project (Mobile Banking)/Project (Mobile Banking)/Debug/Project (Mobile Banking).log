@@ -1,0 +1,8 @@
+﻿  Source.cpp
+C:\Users\risor\OneDrive\Documents\School\Visual Studio\source\Visual Studio\CS 3321\Project (Mobile Banking)\Project (Mobile Banking)\Source.cpp(49,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\risor\OneDrive\Documents\School\Visual Studio\source\Visual Studio\CS 3321\Project (Mobile Banking)\Project (Mobile Banking)\Source.cpp(51,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\risor\OneDrive\Documents\School\Visual Studio\source\Visual Studio\CS 3321\Project (Mobile Banking)\Project (Mobile Banking)\Source.cpp(68,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\risor\OneDrive\Documents\School\Visual Studio\source\Visual Studio\CS 3321\Project (Mobile Banking)\Project (Mobile Banking)\Source.cpp(70,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\risor\OneDrive\Documents\School\Visual Studio\source\Visual Studio\CS 3321\Project (Mobile Banking)\Project (Mobile Banking)\Source.cpp(432,39): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+C:\Users\risor\OneDrive\Documents\School\Visual Studio\source\Visual Studio\CS 3321\Project (Mobile Banking)\Project (Mobile Banking)\Source.cpp(632,14): warning C4101: 'AcessGranted': unreferenced local variable
+  Project (Mobile Banking).vcxproj -> C:\Users\risor\OneDrive\Documents\School\Visual Studio\source\Visual Studio\CS 3321\Project (Mobile Banking)\Debug\Project (Mobile Banking).exe

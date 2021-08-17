@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project (Mobile Banking)", "Project (Mobile Banking)\Project (Mobile Banking).vcxproj", "{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}.Debug|x64.ActiveCfg = Debug|x64
+		{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}.Debug|x64.Build.0 = Debug|x64
+		{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}.Debug|x86.ActiveCfg = Debug|Win32
+		{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}.Debug|x86.Build.0 = Debug|Win32
+		{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}.Release|x64.ActiveCfg = Release|x64
+		{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}.Release|x64.Build.0 = Release|x64
+		{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}.Release|x86.ActiveCfg = Release|Win32
+		{CBF3AD3F-952A-4D16-8A07-B8FB990A07B8}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5BDD9FF-E93B-4E20-A708-CB645FCAA68F}
+	EndGlobalSection
+EndGlobal

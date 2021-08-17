@@ -1,0 +1,252 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <iomanip>
+#include <cstring>
+
+using namespace std;
+
+class CustomerLogin {
+
+public:
+    string UserID;
+    string Password;
+    int loginAttemp;
+    int choice;
+
+    CustomerLogin() {
+
+        AcessGranted = 0;
+    }
+    void Login() {
+
+        cout << "Enter your Username ID:  ";
+        cin >> UserID;
+
+        if (UserID == username) {
+
+            cout << "Password:   ";
+            cin >> Password;
+
+            if (Password == password) {
+                cout << "Logged in..." << endl << endl;
+            }
+            else {
+                cout << "Invalid Password!" << endl;
+                cout << "Please try again." << endl;
+                Login();
+            }
+        }
+        else {
+
+            cout << "Invalid Username!" << endl;
+            cout << "Please try again." << endl;
+            Login();
+        }
+    }
+    int user_option() {
+
+            cout << "****Welcome to Chase****" << endl
+            << "Account Number: " << accountNum << endl << endl
+           
+                << " 1. Deposit " << endl
+                << " 2. Withdraw " << endl
+                << " 3. Balance " << endl
+                << " 4. Change Password " << endl
+                << " 5. Transfer Funds " << endl
+                << " 6. Apply for Loan " << endl
+                << " 7. Open New Account " << endl
+                << " 8. Update Account Information " << endl
+                << " 9. Locate ATM " << endl
+                << " 10.Contact Costumer Service " << endl;
+
+            cout << "Choose an option: ";
+            cin >> choice;
+            cout << endl;
+
+            return choice;
+
+        
+
+    }
+    void Deposit(double &balance) {
+        double deposit;
+
+        if (balance == 0)
+        {
+            cout << fixed << setprecision(2) << "Current Balance is $" << balance << endl;
+            cout << "How much would you like to deposit? " << endl;
+            cin >> deposit;
+
+            balance = balance + deposit;
+
+            cout << fixed << setprecision(2) << "Thank You, your new balance is $" << balance << endl;
+            cout << endl;
+        }
+        else
+        {
+            cout << fixed << setprecision(2) << "Current Balance is $" << balance << endl;
+            cout << "How much would you like to deposit? " << endl;
+            cin >> deposit;
+
+            balance = balance + deposit;
+
+            cout << fixed << setprecision(2) << "Thank You, your new balance is $" << balance << endl;
+        }   cout << endl;
+    }
+    void Withdraw(double& balance) {
+        double cash;
+        
+        cout << "How much would you like to withdraw? " << endl;
+        cin >> cash;
+
+        if (cash > 500)
+        {
+            cout << "To withdraw more than $500, you will have to visit one of our bank facilities. Thank you and have a nice day. " << endl;
+            cout << endl;
+        }
+        else if (balance == 0)
+        {
+            cout << "There is no funds in your account, please deposit first. " << endl;
+            cout << endl;
+        }
+        else
+        {
+            if (cash > balance)
+            {
+                cout << "You have insufficient funds to withdraw $" << cash << " from your account." << endl;
+                cout << endl;
+            }
+            else
+            {
+                balance = balance - cash;
+
+                cout << fixed << setprecision(2) << "You have successfully withdrawn $" << cash << endl;
+                cout << fixed << setprecision(2) << "Your new balance is $" << balance << endl;
+                cout << endl;
+            }
+        }
+    }
+    void Balance(double& balance, int loan) {
+        if (loan > 0)
+        {
+            cout << "Your account balance is $" << balance << endl;
+            cout << "Your loan balance is $" << loan << endl;
+            cout << endl;
+
+        }
+        else
+        {
+            cout << "Your account balance is $" << balance << endl;
+            cout << endl;
+        }
+    }
+
+    void ApplyLoan(bool &LoanDecision, int &loan) {
+        string input;
+        
+
+        if (LoanDecision)
+        {
+            cout << "You cannot apply for a new loan, if you have an existing loan with our bank. " << endl;
+            cout << endl;
+            return;
+        }
+
+        cout << "Would You like to Apply for a Loan? Yes/No " << endl;
+        cin >> input;
+
+        cout << "What amount are you requesting to loan? " << endl;
+        cin >> loan;
+
+        transform(input.begin(), input.end(), input.begin(), ::toupper);
+
+        if (input == "YES" || input == "Y")
+        {
+            LoanDecision = rand() % 2;
+
+            if (LoanDecision == 1)
+            {
+                cout << "Congratulations, You've been approved for a loan of $" << loan << "." << endl;
+                cout << endl;
+            }
+            else
+            {
+                cout << "After review, we are sorry to inform you that you have been decline for a loan." << endl;
+                cout << endl;
+            }
+
+        }
+        else if(input == "NO" || input == "N")
+        {
+            cout << "Sorry to hear that, hope you can reconsider on the loan in the future. " << endl;
+            cout << endl;
+        }
+        else
+        {
+            cout << "Incorrect input. Try again" << endl;
+            ApplyLoan(LoanDecision, loan);
+        }
+        
+    }
+
+private:
+    string username = "admin";
+    string password = "password";
+    string accountNum = "47372834745910852";
+    bool AcessGranted;
+};
+
+
+
+
+int main() {
+    CustomerLogin obj;
+    CustomerLogin   CustomerLoginID;
+    CustomerLoginID.Login();
+    int choice;
+    bool loan{};
+    int loanAmount = { 0 };
+    double bal = { 0 }; //initilize balance
+
+    choice = obj.user_option();
+
+    while (choice != 0) {
+
+        switch (choice) {
+
+        case 1: obj.Deposit(bal);
+            break;
+
+        case 2: obj.Withdraw(bal);
+            break;
+
+        case 3: obj.Balance(bal, loanAmount);
+            break;
+
+        case 4:
+            break;
+
+        case 5:
+            break;
+
+        case 6: obj.ApplyLoan(loan, loanAmount);
+            break;
+
+        case 7:
+            break;
+
+        case 8:
+            break;
+
+        case 9:
+            break;
+
+        case 10:
+            break;
+        }
+        choice = obj.user_option();
+    }
+    system("pause");
+    return 0;
+};
